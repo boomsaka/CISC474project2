@@ -1,3 +1,7 @@
-<h2>Name : {{apod.title}}</h2>
-<h3>Date : {{apod.date}}</h3>
-<h3>Explanation : {{apod.explanation}}</h3>
+<div *ngIf="undefined === restItems">Loading...</div>
+<div *ngIf="undefined !== restItems">
+  <h2 >{{restItems["title"]}}  </h2>
+  <h3 >{{restItems["date"]}}  </h3>
+  <img src = "{{restItems['url']}}"/> 
+  <body>{{restItems["explanation"]}}</body>
+</div>
