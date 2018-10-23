@@ -1,7 +1,31 @@
+
+<!-- Keep loading the conent when the system is still in the process of getting the REST items -->
 <div *ngIf="undefined === restItems">Loading...</div>
+
+<!-- Once finished loading -->
 <div *ngIf="undefined !== restItems">
-  <h2 >{{restItems["title"]}}  </h2>
-  <h3 >{{restItems["date"]}}  </h3>
-  <img src = "{{restItems['url']}}" class = "rounded-circle"/> 
-  <body>{{restItems["explanation"]}}</body>
+    <ngb-carousel id="carousel" data-interval="false">
+        <div *ngFor="let rest_item of restItems.reverse()">
+            <ng-template ngbSlide class="carousel_item">
+                <div class="main_content" *ngIf="rest_item['media_type']==='image'"> <!-- Only shows when the media is an image!! -->
+                    <img id="apod_bg" [src]="rest_item['url']">
+
+                    <div id="basic_info">
+                        <div id="title_photographer">
+                            <h1 id="page_title">{{rest_item['title']}}
+                                <i id="read_more_icon" class="material-icons" (click)="show_image_description()">import_contacts</i>
+                            </h1>
+                            <h2 id="photographer" *ngIf="rest_item['copyright']">{{rest_item['copyright']}}</h2>
+                        </div>
+                        <h2 id="date_taken">{{rest_item['date']}}</h2>
+
+                    </div>
+
+                    <div id="description" *ngIf="show_description">
+                        <p id="image_description">{{rest_item['explanation']}}</p>
+                    </div>
+                </div>
+            </ng-template>
+        </div>
+    </ngb-carousel>
 </div>
