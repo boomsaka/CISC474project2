@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ApodsComponent } from './apods/apods.component';
+import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [
-  {path: '', redirectTo: 'apods', pathMatch: 'full'},
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'apods', component: ApodsComponent },
-//   {path: 'track', component: TracksComponent}
+  {path: 'home', component: HomeComponent}
 ];
 
 @NgModule({
