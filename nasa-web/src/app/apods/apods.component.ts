@@ -33,7 +33,7 @@ export class ApodsComponent implements OnInit {
 
   /** Set the restItemsUrl by the start date */
   set_rest_items_url(start_date_str){
-    this.restItemsUrl = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=" + start_date_str;
+    this.restItemsUrl = "https://api.nasa.gov/planetary/apod?api_key=8El6HcqcvmV7fJxDHkydav2YGlakSSq64U43N3Gp&start_date=" + start_date_str;
   }
 
   /** Gets today's date as a string. */
