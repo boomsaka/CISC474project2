@@ -7,6 +7,7 @@ import { ApodsComponent } from './apods/apods.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
