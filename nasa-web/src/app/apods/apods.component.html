@@ -1,6 +1,10 @@
 
 <!-- Keep loading the conent when the system is still in the process of getting the REST items -->
-<div *ngIf="undefined === restItems">Loading...</div>
+<div *ngIf="undefined === restItems">
+    <div id="loading_spinner">
+        <mat-spinner aria-label="Rating"></mat-spinner>
+    </div>
+</div>
 
 <!-- Once finished loading -->
 <div *ngIf="undefined !== restItems">
@@ -21,8 +25,11 @@
                     <div id="description" *ngIf="show_description">
                         <p id="image_description">{{rest_item['explanation']}}</p>
                     </div>
-                    
+
                     <i id="read_more_icon" class="material-icons" (click)="show_image_description()">import_contacts</i>
+                    <i id="home" class="material-icons" routerLink="/home">home</i>
+                    <i id="about_us" class="material-icons" routerLink="/about_us">info</i>
+                    
                 </div>
             </ng-template>
         </div>

@@ -66,24 +66,6 @@
     z-index: 0;
 }
 
-#read_more_icon{
-    position: absolute;
-    bottom: 40px;
-    /* left: 640px; */
-    left: 50vw;
-    /* float: right; */
-    z-index: 1;                 /* specifies the stack order of the element, higher the #, more front*/
-}
-
-.material-icons{
-    font-size:35px;
-    color:white
-}
-
-#read_more_icon:hover{
-    margin-bottom: 10px;
-}
-
 #image_description{
     background-color: rgba(0, 0, 0, 0.5);
     margin-top: 25px;
@@ -99,6 +81,44 @@
     font-size: 18px;
     line-height: 1.5;
     overflow-y: scroll;
+}
+
+/* Icons at the bottom */
+.material-icons{
+    position: absolute;
+    z-index: 1;                 /* specifies the stack order of the element, higher the #, more front*/
+    font-size:35px;
+    color:white;
+    bottom: 40px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.material-icons:hover{
+    margin-bottom: 10px;
+}
+
+#home{
+    color: white;
+    left: 45vw;
+}
+
+#read_more_icon{
+    color: white;
+    left: 50vw;
+}
+
+#about_us{
+    font-size: 32px;
+    color: white;
+    left: 55vw;
+}
+
+
+#loading_spinner{
+    position: absolute;
+    z-index: 1;                 /* specifies the stack order of the element, higher the #, more front*/
+    top: 35vh;
+    left: 46vw;
 }
 
 
